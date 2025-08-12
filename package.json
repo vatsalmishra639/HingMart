@@ -3,14 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://vatsalmishra639.github.io/HingMart",
+  "homepage": "https://vatsalmishra639.github.io/Hingmart",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -21,6 +21,7 @@
     "@mui/styled-engine-sc": "^7.2.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0",
     "styled-components": "^6.1.19"
   },
   "devDependencies": {
@@ -36,4 +37,3 @@
     "vite": "^7.0.4"
   }
 }
-

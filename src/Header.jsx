@@ -3,6 +3,7 @@ import React from 'react';
 import { FaShoppingCart, FaLeaf } from 'react-icons/fa';
 import { useCartContext } from './CartContext';
 import './Header.css';
+import { FaBeer } from 'react-icons/fa';
 
 const Header = () => {
   const { cartItems, getTotalAmount, toggleCartPopup } = useCartContext();
