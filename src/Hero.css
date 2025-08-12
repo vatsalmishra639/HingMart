@@ -1,0 +1,130 @@
+.hero-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 8rem 1rem 4rem;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  animation: fadeInTop 1s ease-in-out;
+}
+
+.hero-title .highlight {
+  background: linear-gradient(90deg, #facc15, #f97316);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  animation: fadeInTop 1.3s ease-in-out;
+}
+
+.hero-buttons button {
+  margin: 0.5rem;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  font-size: 1rem;
+}
+
+.order-btn {
+  background: #facc15;
+  color: white;
+  border: none;
+}
+
+.order-btn:hover {
+  background: #eab308;
+  transform: scale(1.05);
+}
+
+.call-btn {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.call-btn:hover {
+  background: white;
+  color: #6b21a8;
+  transform: scale(1.05);
+}
+
+/* Animation keyframes */
+@keyframes fadeInTop {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-buttons button {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+.particles-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.particles-bg::before,
+.particles-bg::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  animation: floatParticles 10s infinite ease-in-out alternate;
+}
+
+.particles-bg::before {
+  width: 200px;
+  height: 200px;
+  top: 10%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.particles-bg::after {
+  width: 150px;
+  height: 150px;
+  bottom: 10%;
+  right: 15%;
+  animation-delay: 3s;
+}
+
+@keyframes floatParticles {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-30px) scale(1.1); }
+}
+
+/* Ensure content is above particles */
+.hero-title,
+.hero-subtitle,
+.hero-buttons {
+  position: relative;
+  z-index: 1;
+}
